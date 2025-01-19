@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y \
 # Enable mod_rewrite for Laravel (pretty URLs)
 RUN a2enmod rewrite
 
+# Install Composer (Laravel's package manager)
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 # Set the working directory for your app
 WORKDIR /var/www/html
 
