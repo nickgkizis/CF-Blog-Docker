@@ -1,0 +1,71 @@
+.outer{
+    width:65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.list-group{
+    background-color: #ffffff;
+    padding:3rem;
+    border-radius: 10px;
+    width: 100%;
+}
+.list-group-item {
+    border-radius: 10px;
+    padding: 25px;
+    margin:15px;
+    width:70%;  
+    overflow: hidden;
+    background-color: transparent !important; 
+    z-index: 5;
+    border-left:10px solid grey;
+    border-right:3px solid grey;
+    border-top:3px solid grey !important;
+    border-bottom:10px solid grey !important;
+    transition: all 1s ease-in-out;
+    opacity: 0.9;
+}
+.list-group-item:hover{
+    scale:1.2;
+    transition: all 1s ease-in-out;
+    opacity: 1;
+}
+/* old look */
+/* .list-group-item:hover {
+transform: translate(-10px, -10px) scale(1.01);
+box-shadow: 6px 6px 0px ;
+transition: all 0.5s ease-in-out;
+background: linear-gradient(135deg, #0fffff, #000fff);
+} */
+.list-group-item::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: linear-gradient(135deg, #0fffff, #000fff);
+transition: all 1s ease-in-out; 
+z-index: 1; 
+}
+.list-group-item:hover::before {
+    width: 100%;
+    z-index: 1;
+}
+.list-group-item h4 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+    z-index: 6; 
+}
+.list-group-item p {
+    font-size: 1.2rem;
+    color: #555;
+    position: relative;
+    z-index: 6;
+}
+.fa-2x {
+    width: 40px;
+    height: 40px;
+    z-index: 5;
+}
