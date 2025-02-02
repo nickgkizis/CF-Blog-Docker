@@ -19,7 +19,7 @@
 5. **Run Database Migrations**
    ```
     docker-compose exec app php artisan migrate
-6. **Run Seeders**
+6. **Run Seeders (optional)**
    ```
    docker-compose exec app php artisan db:seed
 
@@ -28,6 +28,10 @@
    docker-compose down
    docker-compose up -d
 
-8. **The app should be running at localhost:8000**
+8. **Api Testing (optional)**
+   ```
+   docker-compose exec app php artisan test
+
+9. **The app should be running at localhost:8000**
     
    
